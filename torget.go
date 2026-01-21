@@ -59,7 +59,7 @@ type State struct {
 const torBlock = 8000 // the longest plain text block in Tor
 
 func httpClient(user string) *http.Client {
-	proxyUrl, _ := url.Parse("socks5://" + user + ":" + user + "@127.0.0.1:9050/")
+	proxyUrl, _ := url.Parse("socks5://" + user + ":" + user + "@127.0.0.1:9150/")
 	return &http.Client{
 		Transport: &http.Transport{Proxy: http.ProxyURL(proxyUrl)},
 	}
